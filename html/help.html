@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help | FinishLedger</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/help.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="../index.html">FinishLedger</a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="../index.html">Dashboard</a>
+                <a href="../php/jobLog.php">Order Log</a>
+                <a href="insights.html">Insights</a>
+                <a href="help.html" class="active">Help</a>
+            </nav>
+            <a id="login-btn" href="../php/login.php">Login</a>
+        </aside>
+
+        <main class="content-area">
+            <section class="page-header">
+                <p>Workflow</p>
+                <h1>Keep job records accurate from entry to analysis.</h1>
+            </section>
+
+            <section class="help-grid-container">
+                <article class="help-card">
+                    <h2>Add an Order</h2>
+                    <ol class="instruction-steps">
+                        <li>Open the Dashboard and choose Add.</li>
+                        <li>Enter the client, service type, revenue, cost, and order date.</li>
+                        <li>Submit the form. The dashboard updates without a page refresh.</li>
+                    </ol>
+                </article>
+
+                <article class="help-card">
+                    <h2>Update an Order</h2>
+                    <ol class="instruction-steps">
+                        <li>Choose Update and enter the invoice ID.</li>
+                        <li>Load the existing record, edit the fields, and save.</li>
+                        <li>Use the Order Log to confirm the corrected record.</li>
+                    </ol>
+                </article>
+
+                <article class="help-card">
+                    <h2>Review Trends</h2>
+                    <ol class="instruction-steps">
+                        <li>Open Insights to compare cumulative profit and service profitability.</li>
+                        <li>Hover on chart marks for invoice and profit details.</li>
+                        <li>Use these charts to replace recurring spreadsheet summaries.</li>
+                    </ol>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

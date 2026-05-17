@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights | FinishLedger</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="../js/insights.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">FinishLedger</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../index.html">Dashboard</a>
+        <a href="../php/jobLog.php">Order Log</a>
+        <a href="insights.html" class="active">Insights</a>
+        <a href="help.html">Help</a>
+      </nav>
+      <a id="login-btn" href="../php/login.php">Login</a>
+    </aside>
+
+    <main class="insights-page">
+      <section class="page-header">
+        <p>Analytics</p>
+        <h1>Revenue, cost, and profit trends without the spreadsheet work.</h1>
+      </section>
+
+      <div class="chart-controls" aria-label="Chart controls">
+        <button type="button" id="show-cumulative">Profit Trend</button>
+        <button type="button" id="show-service-profits">Service Mix</button>
+      </div>
+
+      <div id="chart-container" aria-live="polite"></div>
+    </main>
+  </div>
+</body>
+</html>

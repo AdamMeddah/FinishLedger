@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | FinishLedger</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html">FinishLedger</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html" class="active">Dashboard</a>
+          <a href="php/jobLog.php">Order Log</a>
+          <a href="html/insights.html">Insights</a>
+          <a href="html/help.html">Help</a>
+        </nav>
+        <a id="login-btn" href="php/login.php">Login</a>
+      </aside>
+
+      <main class="dashboard">
+        <section class="page-header">
+          <p>Finest Finish Operations</p>
+          <h1>Orders, costs, and revenue in one workspace.</h1>
+        </section>
+
+        <section class="metric-grid" aria-label="Business summary">
+          <article class="metric-card">
+            <span>Total Revenue</span>
+            <strong id="totalRevenue">$0.00</strong>
+          </article>
+          <article class="metric-card">
+            <span>Total Cost</span>
+            <strong id="totalCost">$0.00</strong>
+          </article>
+          <article class="metric-card">
+            <span>Total Profit</span>
+            <strong id="totalProfit">$0.00</strong>
+          </article>
+          <article class="metric-card">
+            <span>Orders</span>
+            <strong id="orderCount">0</strong>
+          </article>
+        </section>
+
+        <section class="workspace-grid">
+          <div class="panel form-panel">
+            <div class="panel-header">
+              <div>
+                <p>Order Management</p>
+                <h2 id="formTitle">Add Order</h2>
+              </div>
+              <div class="segmented-control" aria-label="Order action">
+                <button type="button" id="add" class="active">Add</button>
+                <button type="button" id="update">Update</button>
+                <button type="button" id="delete">Delete</button>
+              </div>
+            </div>
+
+            <form id="jobForm" class="order-form" data-mode="add" novalidate>
+              <input type="hidden" id="currentMode" value="add" />
+
+              <label class="field invoice-field hidden" for="invoiceID">
+                <span>Invoice ID</span>
+                <input type="number" id="invoiceID" name="InvoiceID" min="1" step="1" inputmode="numeric" />
+                <small class="field-error" data-for="invoiceID"></small>
+              </label>
+
+              <button type="button" id="loadUpdateData" class="secondary hidden">Load Order</button>
+
+              <div id="editableFields">
+                <label class="field" for="clientName">
+                  <span>Client Name</span>
+                  <input
+                    type="text"
+                    id="clientName"
+                    name="clientName"
+                    autocomplete="organization"
+                    pattern="[A-Za-z][A-Za-z0-9 .,'&-]{1,79}"
+                    required
+                  />
+                  <small class="field-error" data-for="clientName"></small>
+                </label>
+
+                <label class="field" for="jobType">
+                  <span>Service Type</span>
+                  <input
+                    type="text"
+                    id="jobType"
+                    name="jobType"
+                    pattern="[A-Za-z][A-Za-z0-9 .,&/-]{2,79}"
+                    required
+                  />
+                  <small class="field-error" data-for="jobType"></small>
+                </label>
+
+                <div class="form-row">
+                  <label class="field" for="revenue">
+                    <span>Revenue</span>
+                    <input type="number" id="revenue" name="revenue" min="0" step="0.01" inputmode="decimal" required />
+                    <small class="field-error" data-for="revenue"></small>
+                  </label>
+
+                  <label class="field" for="expense">
+                    <span>Cost</span>
+                    <input type="number" id="expense" name="expense" min="0" step="0.01" inputmode="decimal" required />
+                    <small class="field-error" data-for="expense"></small>
+                  </label>
+                </div>
+
+                <label class="field" for="date">
+                  <span>Order Date</span>
+                  <input type="date" id="date" name="date" required />
+                  <small class="field-error" data-for="date"></small>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" id="submitOrder">Save Order</button>
+                <span id="formStatus" role="status" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+
+          <aside class="panel recent-panel">
+            <div class="panel-header">
+              <div>
+                <p>Recent Activity</p>
+                <h2>Latest Orders</h2>
+              </div>
+            </div>
+            <div id="recentOrders" class="recent-orders"></div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

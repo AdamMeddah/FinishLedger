@@ -1,0 +1,17 @@
+.DS_Store
+*.zip
+
+# Local PHP/database configuration
+php/config.local.php
+.env
+.env.*
+
+# Runtime and dependency directories
+vendor/
+node_modules/
+coverage/
+
+# Editor and OS files
+.idea/
+.vscode/
+Thumbs.db
