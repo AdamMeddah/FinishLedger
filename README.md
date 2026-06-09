@@ -2,8 +2,7 @@
 
 FinishLedger is a PHP, MySQL, JavaScript, and D3.js web application built for a Hamilton-based finishing and renovation business. It tracks client orders, revenue, costs, and profit trends from one dashboard so the client can move routine analysis out of spreadsheets.
 
-This repository is a polished portfolio iteration of an original McMaster 1XD3 client project. The application was cleaned up for public review with safer configuration, stronger validation, a clearer data model, asynchronous form workflows, and recruiter-friendly documentation.
-
+This repository is a polished portfolio iteration of an original client project. The application was cleaned up for public review with safer configuration, stronger validation, a clearer data model,  asynchronous form workflows and better documentation.
 ## Features
 
 - Order dashboard with total revenue, total cost, total profit, order count, and recent order activity.
