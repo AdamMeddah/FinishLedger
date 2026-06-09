@@ -1,17 +1,9 @@
 # FinishLedger
 
-FinishLedger is a PHP, MySQL, JavaScript, and D3.js web application built for Finest Finish, a Hamilton-based finishing and renovation business. It tracks client orders, revenue, costs, and profit trends from one dashboard so the client can move routine analysis out of spreadsheets.
+FinishLedger is a PHP, MySQL, JavaScript, and D3.js web application built for a Hamilton-based finishing and renovation business. It tracks client orders, revenue, costs, and profit trends from one dashboard so the client can move routine analysis out of spreadsheets.
 
 This repository is a polished portfolio iteration of an original McMaster 1XD3 client project. The application was cleaned up for public review with safer configuration, stronger validation, a clearer data model, asynchronous form workflows, and recruiter-friendly documentation.
 
-## Resume Context
-
-**Software Developer, Finest Finish**  
-Jan. 2025 - May 2025
-
-- Implemented regex input validation, cutting invalid form submissions by 85% and improving data reliability.
-- Built a PHP and MySQL web application for tracking orders, costs, and revenue; reduced form submission latency by 80% (2.5s to 0.5s) through asynchronous JavaScript requests.
-- Developed D3.js visualizations to surface order, cost, revenue, and profit trends, reducing manual spreadsheet-based analysis for the client.
 
 ## Features
 
