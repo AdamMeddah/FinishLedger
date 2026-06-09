@@ -1,4 +1,4 @@
-# tracker-refactor
+# FinishLedger
 
 FinishLedger is a PHP, MySQL, JavaScript, and D3.js web application built for a Hamilton-based finishing and renovation business. It tracks client orders, revenue, costs, and profit trends from one dashboard so the client can move routine analysis out of spreadsheets.
 
