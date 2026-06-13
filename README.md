@@ -105,6 +105,3 @@ Run JavaScript syntax checks:
 for file in js/*.js; do node --check "$file"; done
 ```
 
-## Notes for Recruiters
-
-This is intentionally presented as a public, portfolio-ready version of the project. The original class/client codebase was expanded and modernized so the repository demonstrates the engineering work behind the resume bullets: validation, asynchronous form handling, MySQL-backed CRUD operations, and D3.js reporting.
